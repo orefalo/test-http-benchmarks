@@ -9,7 +9,6 @@ export let options = {
   vus: 50,
   // sampling duration
   duration: "30s",
-  rps: 600,
   // enable to debug
   // httpDebug: 'full',
   // A boolean, true or false, specifying whether k6 should disable keep-alive connections

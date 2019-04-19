@@ -2,10 +2,7 @@ const uWS = require("uWebSockets.js")
 
 const app = uWS
   .App()
-  .get("/*", (res, req) => {
-    res.end("Hello World!")
-  })
-  .post("/*", (res, req) => {
+  .any("/*", (res, req) => {
     res.end("Hello World!")
   })
   .listen(9001, token => {
