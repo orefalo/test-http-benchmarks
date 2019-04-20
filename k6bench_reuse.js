@@ -28,7 +28,7 @@ export default function() {
   const url = "http://localhost:9001"
   const payload = ""
   const params = { headers: { "Content-Type": "application/json" } }
-  const res = http.post(url, payload, params)
+  const res = http.get(url, payload, params)
 
   check(res, {
     "Status was 200": r => r.status == 200,

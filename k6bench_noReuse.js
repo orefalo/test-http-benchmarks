@@ -10,7 +10,7 @@ export let options = {
   // sampling duration
   duration: "30s",
   // enable to debug
-  // httpDebug: 'full',
+  httpDebug: 'full',
   // A boolean, true or false, specifying whether k6 should disable keep-alive connections
   noConnectionReuse: true,
   noVUConnectionReuse: true,
@@ -25,7 +25,7 @@ export default function() {
   const url = "http://localhost:9001"
   const payload = ""
   const params = { headers: { "Content-Type": "application/json" } }
-  const res = http.post(url, payload, params)
+  const res = http.get(url, payload, params)
 
   check(res, {
     "Status was 200": r => r.status == 200,
